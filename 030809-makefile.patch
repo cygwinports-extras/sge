@@ -1,0 +1,21 @@
+--- origsrc/sge030809/Makefile	2008-12-23 19:04:38.599875000 -0600
++++ src/sge030809/Makefile	2008-12-23 19:06:31.303000000 -0600
+@@ -2,7 +2,7 @@
+ 
+ include Makefile.conf
+ 
+-CXXFLAGS += $(SGE_CFLAGS) -fPIC $(FT_CFLAGS)
++CXXFLAGS += $(SGE_CFLAGS) $(FT_CFLAGS)
+ LIBS =$(SGE_LIBS)
+ 
+ SGE_VER = 030809
+@@ -30,8 +30,7 @@
+ 
+ # Building a dll... I have no idea how to do this, but it should be something like below.
+ dll:	sge_config.h $(OBJECTS)
+-	dlltool --output-def SGE.def $(OBJECTS)
+-	dllwrap --driver-name $(CXX) -o SGE.dll --def SGE.def --output-lib libSGE.a --dllname SGE.dll $(OBJECTS) $(LIBS)
++	$(CXX) -shared $(LDFLAGS) -Wl,--out-implib,libSGE.dll.a -o cygSGE-$(API_VER).dll $(OBJECTS) $(LIBS)
+ 
+ dll-strip:	dll
+ 	@strip SGE.dll

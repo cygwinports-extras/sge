@@ -1,0 +1,88 @@
+sge
+-------------------------------------------
+SGE is a graphic extensions library for the excellent Simple DirectMedia 
+Layer (SDL) library.
+
+So, why use SGE? Well, SDL is a low level API and if you don't want to 
+spend time writing your own graphic functions (put pixel, line, 
+circle...) you could use SGE instead.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  libfreetype26-2.3.7-1
+  libSDL1.2_0-1.2.13-2
+  libSDL_image1.2_0-1.2.7-1
+
+Build requirements:
+(besides corresponding devel packages)
+  binutils-20080624-2
+  gcc-core-3.4.4-3
+  gcc-g++-3.4.4-3
+  make-3.81-1
+  pkg-config-0.23a-2
+
+Canonical homepage:
+  http://www.etek.chalmers.se/~e8cal1/sge/
+
+Canonical download:
+  http://www.etek.chalmers.se/~e8cal1/sge/files/
+
+-------------------------------------------
+
+Build instructions:
+  unpack sge-030809-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./sge-030809-X.cygport all
+
+This will create:
+  /usr/src/sge-030809-X-src.tar.bz2
+  /usr/src/libSGE-devel-030809-X.tar.bz2
+  /usr/src/libSGE0-030809-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+(libSGE0)
+  /usr/bin/cygSGE-0.dll
+  /usr/share/doc/sge-030809/INSTALL
+  /usr/share/doc/sge-030809/LICENSE
+  /usr/share/doc/sge-030809/README
+  /usr/share/doc/sge-030809/TODO
+  /usr/share/doc/sge-030809/WHATSNEW
+
+(libSGE-devel)
+  /usr/include/SDL/sge.h
+  /usr/include/SDL/sge_blib.h
+  /usr/include/SDL/sge_bm_text.h
+  /usr/include/SDL/sge_collision.h
+  /usr/include/SDL/sge_config.h
+  /usr/include/SDL/sge_internal.h
+  /usr/include/SDL/sge_misc.h
+  /usr/include/SDL/sge_primitives.h
+  /usr/include/SDL/sge_rotation.h
+  /usr/include/SDL/sge_shape.h
+  /usr/include/SDL/sge_surface.h
+  /usr/include/SDL/sge_textpp.h
+  /usr/include/SDL/sge_tt_text.h
+  /usr/lib/libSGE.a
+  /usr/lib/libSGE.dll.a
+
+------------------
+
+Port Notes:
+
+----- version 030809-3 -----
+Rebuilt.
+
+----- version 030809-2 -----
+Rebuilt with X11 port of SDL.
+
+----- version 030809-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://www.cygwinports.org/

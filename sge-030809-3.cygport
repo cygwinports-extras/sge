@@ -1,0 +1,33 @@
+DESCRIPTION="SDL Graphics Extension library"
+HOMEPAGE="http://www.etek.chalmers.se/~e8cal1/sge/"
+SRC_URI="http://www.etek.chalmers.se/~e8cal1/sge/files/${PN}${PV}.tar.gz"
+PATCH_URI="
+	mirror://portage/media-libs/${PN}/files/${P}-build.patch
+	mirror://portage/media-libs/${PN}/files/${P}-freetype.patch
+	mirror://portage/media-libs/${PN}/files/${P}-cmap.patch
+	030809-makefile.patch
+"
+
+SRC_DIR="${PN}${PV}"
+
+PKG_NAMES="${PN} libSGE0 libSGE-devel"
+libSGE0_CONTENTS="usr/bin/cygSGE-0.dll usr/share/"
+libSGE_devel_CONTENTS="usr/include/ usr/lib/"
+
+DIFF_EXCLUDES="sge_config.h"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	rm -f sge_config.h
+	cygmake all dll USE_IMG=y USE_FT=y
+}
+
+src_install() {
+	cd ${B}
+	dobin *.dll
+	dolib *.a
+
+	insinto /usr/include/SDL
+	doins *.h
+}

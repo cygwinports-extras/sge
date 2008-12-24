@@ -1,0 +1,10 @@
+category: X11
+requires: cygwin libSGE0 libfreetype2-devel libSDL-devel libSDL_image-devel
+external-source: sge
+sdesc: "SDL graphics extension library (development)"
+ldesc: "SGE is a graphic extensions library for the excellent Simple 
+DirectMedia Layer (SDL) library.
+
+So, why use SGE? Well, SDL is a low level API and if you don't want to
+spend time writing your own graphic functions (put pixel, line,
+circle...) you could use SGE instead."
