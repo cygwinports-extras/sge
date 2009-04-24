@@ -8,18 +8,20 @@ spend time writing your own graphic functions (put pixel, line,
 circle...) you could use SGE instead.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libfreetype26-2.3.7-1
-  libSDL1.2_0-1.2.13-2
-  libSDL_image1.2_0-1.2.7-1
+  cygwin-1.7.0-45
+  libfreetype6-2.3.9-1
+  libgcc1-4.3.2-2
+  libSDL1.2_0-1.2.13-10
+  libSDL_image1.2_0-1.2.7-10
+  libstdc++6-4.3.2-2
 
 Build requirements:
 (besides corresponding devel packages)
   binutils-20080624-2
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  make-3.81-1
-  pkg-config-0.23a-2
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  make-3.81-2
+  pkg-config-0.23b-10
 
 Canonical homepage:
   http://www.etek.chalmers.se/~e8cal1/sge/
@@ -47,11 +49,10 @@ Files included in the binary package:
 
 (libSGE0)
   /usr/bin/cygSGE-0.dll
-  /usr/share/doc/sge-030809/INSTALL
-  /usr/share/doc/sge-030809/LICENSE
-  /usr/share/doc/sge-030809/README
-  /usr/share/doc/sge-030809/TODO
-  /usr/share/doc/sge-030809/WHATSNEW
+  /usr/share/doc/sge/LICENSE
+  /usr/share/doc/sge/README
+  /usr/share/doc/sge/TODO
+  /usr/share/doc/sge/WHATSNEW
 
 (libSGE-devel)
   /usr/include/SDL/sge.h
@@ -74,14 +75,8 @@ Files included in the binary package:
 
 Port Notes:
 
------ version 030809-3 -----
-Rebuilt.
-
------ version 030809-2 -----
-Rebuilt with X11 port of SDL.
-
------ version 030809-1 -----
-Initial release for Cygwin.
+----- version 030809-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

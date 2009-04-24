@@ -20,7 +20,7 @@ src_compile() {
 	lndirs
 	cd ${B}
 	rm -f sge_config.h
-	cygmake all dll USE_IMG=y USE_FT=y
+	cygmake all dll CC="${CC}" CXX="${CXX}" USE_IMG=y USE_FT=y
 }
 
 src_install() {

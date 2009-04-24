@@ -1,14 +1,16 @@
 --- origsrc/sge030809/Makefile	2008-12-23 19:04:38.599875000 -0600
 +++ src/sge030809/Makefile	2008-12-23 19:06:31.303000000 -0600
-@@ -2,7 +2,7 @@
+@@ -2,8 +2,8 @@
  
  include Makefile.conf
  
 -CXXFLAGS += $(SGE_CFLAGS) -fPIC $(FT_CFLAGS)
+-LIBS =$(SGE_LIBS)
 +CXXFLAGS += $(SGE_CFLAGS) $(FT_CFLAGS)
- LIBS =$(SGE_LIBS)
++LIBS =$(SGE_LIBS) $(FT_LIBS)
  
  SGE_VER = 030809
+ API_VER = 0
 @@ -30,8 +30,7 @@
  
  # Building a dll... I have no idea how to do this, but it should be something like below.
