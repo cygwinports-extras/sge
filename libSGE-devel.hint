@@ -1,5 +1,5 @@
 category: X11
-requires: cygwin libSGE0 libfreetype-devel libSDL-devel libSDL_image-devel libstdc++6-devel
+requires: libSGE0 libfreetype-devel libSDL-devel libSDL_image-devel libstdc++6-devel
 external-source: sge
 sdesc: "SDL graphics extension library (development)"
 ldesc: "SGE is a graphic extensions library for the excellent Simple 
